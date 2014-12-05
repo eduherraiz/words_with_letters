@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles i18n %}
+
+{% block content %}
+<div class="inner cover">
+  <h1 class="cover-heading">{% trans "Palabras con letras" %}</h1>
+  <p class="lead">{% trans "¿Quieres saber que palabras existen con unas determinadas letras?" %}</p>
+  <p class="lead">
+    <form method="post" action="{% url "resultado" %}" role="form">
+      {% csrf_token %}
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-8">
+          {{form.email.errors}}
+          <input type="text" class="form-control" id="letters" name="letters" placeholder="{% trans "Introduce letras" %}">
+
+        </div>
+
+        <div class="col-sm-offset-2 col-sm-8 btnsubmit">
+          <button type="submit" class="btn btn-success">{% trans "Enviar" %}</button>
+        <br/>
+
+        </div>
+      </div>
+    </form>
+  </p>
+</div>
+{% endblock %}

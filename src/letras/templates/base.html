@@ -1,0 +1,63 @@
+{% load staticfiles i18n %}{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{% trans "Palabras con letras" %}">
+<meta name="author" content="eduherraiz>
+
+<link rel="shortcut icon" href="{{STATIC_URL}}img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{STATIC_URL}}img/favicon.ico" type="image/x-icon">
+
+<title>{% trans "Palabras con letras" %}</title>
+
+<!-- Bootstrap core CSS -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="{% static 'css/cover.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="site-wrapper">
+
+  <div class="site-wrapper-inner">
+
+    <div class="cover-container">
+      <div class="inner lang">
+        <a href="/ca/" class="btn btn-primary btn-xs {% ifequal LANGUAGE_CODE 'ca' %}active{% endifequal %}">Català</a>
+        <a href="/es/" class="btn btn-primary btn-xs {% ifequal LANGUAGE_CODE 'es' %}active{% endifequal %}">Español</a>
+      </div>
+      {% block content%}
+      {% endblock %}
+
+      <!--<div class="row">-->
+        <!--<div class="col-md-12 mastfoot">-->
+          <!--<div class="inner">-->
+            <!--<p>{% trans "Encuentra el código de esta web en" %} <a href="">Github</a></p>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- Google Analytics -->
+
+
+</body>
+</html>
+{% endspaceless %}

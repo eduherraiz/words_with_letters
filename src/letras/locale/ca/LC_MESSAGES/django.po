@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-12-05 22:00+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/base.html:8 templates/base.html.py:14 templates/home.html:6
+msgid "Palabras con letras"
+msgstr "Paraules amb lletres"
+
+#: templates/base.html:42
+msgid "Encuentra el código de esta web en"
+msgstr "Troba el codi d'aquesta web"
+
+#: templates/home.html:7
+msgid "¿Quieres saber que palabras existen con unas determinadas letras?"
+msgstr "Vols saber quines paraules es poden fer amb unes lletres?"
+
+#: templates/home.html:14
+msgid "Introduce letras"
+msgstr "Introdueix les lletres"
+
+#: templates/home.html:19
+msgid "Enviar"
+msgstr "Enviar"
+
+#: templates/resultado.html:10
+msgid "http://lema.rae.es/drae/?val="
+msgstr "http://www.enciclopedia.cat/cerca?s.q="
+
+#: templates/resultado.html:13
+msgid "No hay palabras con esas letras"
+msgstr "No hi ha paraules amb aquestes lletres"
+
+#: templates/resultado.html:16
+msgid "Prueba otra vez"
+msgstr "Prova un altre vegada"
