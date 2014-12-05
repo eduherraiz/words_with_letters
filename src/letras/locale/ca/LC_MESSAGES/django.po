@@ -24,7 +24,7 @@ msgstr "Paraules amb lletres"
 
 #: templates/base.html:42
 msgid "Encuentra el código de esta web en"
-msgstr "Troba el codi d'aquesta web"
+msgstr "Troba el codi d'aquesta web a"
 
 #: templates/home.html:7
 msgid "¿Quieres saber que palabras existen con unas determinadas letras?"
