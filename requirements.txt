@@ -1,5 +1,6 @@
 Django==1.7
 Fabric==1.10.0
+Unidecode==0.04.16
 argparse==1.2.1
 args==0.1.0
 configparser==3.3.0r2

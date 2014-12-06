@@ -21,13 +21,13 @@ class ResultadoView(TemplateView):
 
         # Selection dictionary
         cur_language = translation.get_language()
-        if cur_language == 'ca':
-            dictionary = 'catalan.txt'
-        else:
-            dictionary =  'spanish.txt'
+        dictionary = 'dictionarys/%s.dict' % cur_language
 
         context = {}
         context['letters'] = unicode(letters)
+
+        letters = unidecode(letters.lower())
+
         if letters:
             words = [line.strip() for line in open(dictionary)]
             final_words = []
