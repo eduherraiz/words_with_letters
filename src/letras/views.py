@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from django.views.generic import CreateView, TemplateView
+from django.views.generic import  TemplateView
+from django.template import RequestContext
 from django.utils import translation
 from unidecode import unidecode
 
@@ -12,8 +13,14 @@ class HomeView(TemplateView):
 class ResultadoView(TemplateView):
     template_name = 'resultado.html'
 
+    def get(self, request, *args, **kwargs):
+        letters = request.GET.get("l", None)
+        context = self.get_words(letters)
+        context['request'] = RequestContext(request)
+        return self.render_to_response(context)
+
     def post(self, request, *args, **kwargs):
-        letters = request.POST.get("letters", None)
+        letters = request.POST.get("l", None)
         context = self.get_words(letters)
         return self.render_to_response(context)
 
@@ -26,9 +33,9 @@ class ResultadoView(TemplateView):
         context = {}
         context['letters'] = unicode(letters)
 
-        letters = unidecode(letters.lower())
-
         if letters:
+            letters = unidecode(letters.lower())
+
             words = [line.strip() for line in open(dictionary)]
             final_words = []
             for word in words:
